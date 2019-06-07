@@ -138,11 +138,6 @@ public  class Main extends Application {
         VBox vBox4=new VBox(lbtoppings,papperoni,olive,tomato,brochili,mushrooms);
         vBox4.setPadding(new Insets(30));
 
-
-
-
-
-
         Button btn=new Button("Place Order");
         btn.setAlignment(Pos.BOTTOM_LEFT);
         btn.setPrefWidth(80);
@@ -153,27 +148,7 @@ public  class Main extends Application {
 
            btn.setOnAction(e->onclick(primaryStage));
 
-
-
-
-
-
-
-
-
-        VBox vBox1=new VBox(textheading,hBox2,hbox3,hBox4,hBox5,vBox4,btn);
-
-
-
-
-
-
-
-
-
-
-
-
+           VBox vBox1=new VBox(textheading,hBox2,hbox3,hBox4,hBox5,vBox4,btn);
         BorderPane  pane=new BorderPane(vBox1);
         BorderPane pane1=new BorderPane();
 
@@ -203,13 +178,13 @@ public  class Main extends Application {
         str+="Your order is: \n";
 
         if(small.isSelected()){
-            str+="small";
+            str+="small,";
         }
         if(medium.isSelected()){
-            str+="medium";
+            str+="medium,";
         }
         if(large.isSelected()){
-            str+="large";
+            str+="large,";
         }
 
 
@@ -219,7 +194,8 @@ public  class Main extends Application {
         if(thick.isSelected()){
             str+="thick crust";
         }
-        str+="pizza";
+        str+="pizza with\n";
+
         if(!name.getText().isEmpty()&&!phone.getText().isEmpty()&&!address.getText().isEmpty() ){
             Label lb=new Label(str);
             BorderPane pane1=new BorderPane(lb);
@@ -236,56 +212,12 @@ public  class Main extends Application {
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // alert.setHeaderText(null);
 
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    private void string1(){
+        System.out.println(1);
+    }
     public static void main(String[] args) {
         launch(args);
     }
